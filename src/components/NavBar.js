@@ -1,20 +1,31 @@
-import React from 'react'
-import AppBar from '@material-ui/core/AppBar'
-import Toolbar from '@material-ui/core/Toolbar'
-import Typography from '@material-ui/core/Typography'
+import React, { Component } from 'react';
+import Paper from '@material-ui/core/Paper';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 
-const NavBar = () => {
-    return(
-        <div>
-        <AppBar position="static">
-            <Toolbar>
-                <Typography variant="title" color="inherit">
-                React & Material-UI Sample Application
-                </Typography>
-            </Toolbar>
-        </AppBar>
-        </div>
-    )
+function NavBar(props) {
+    const handleChange = (event, newValue) => {
+        props.handleChange(newValue);
+    };
+
+    return (
+        // <Paper className={'navbar'} square>
+            <Tabs
+                value={props.currentValue}
+                indicatorColor="primary"
+                // textColor=""
+                onChange={handleChange}
+                aria-label="Navigation Bar"
+                centered
+                
+            >
+                <Tab label="Home" />
+                <Tab label="Accomplishments" />
+                <Tab label="Skills" />
+                <Tab label="Testimonials" />
+            </Tabs>
+        // </Paper>
+    );
 }
 
 export default NavBar;
