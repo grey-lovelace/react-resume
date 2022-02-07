@@ -5,7 +5,8 @@
 }
 
 * {
-  color: var(--secondary-color)
+  color: var(--secondary-color);
+  /* font-family: Verdana */
 }
 
 .top-banner {
@@ -19,7 +20,9 @@
 
 .name-plate {
   padding: 5px;
-  padding-left: 25px
+  padding-left: 20px;
+  min-width: 380px;
+  text-align: left;
 }
 
 .MuiPaper-root {
@@ -52,7 +55,7 @@
   text-align: right;
 }
 
-.testimonial-cards {
+.testimonial-card {
   padding-bottom: 15px
 }
 
@@ -64,4 +67,21 @@
   padding: 15px;
   height: 275px;
 
+}
+
+.values-div {
+  text-align: center;
+}
+
+.skill-type {
+  text-align: center;
+  font-weight: bold;
+}
+
+.skill-details {
+  text-align: center;
+}
+
+.thick-divider {
+  border-width: 15px;
 }

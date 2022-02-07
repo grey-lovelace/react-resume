@@ -30,7 +30,6 @@ function Testimonials() {
         <div>
             <Container maxWidth='lg'>
             <h1 >Testimonials</h1>
-            {/* <Grid container direction={'column'} space={24}> */}
                 <Grid container className='testimonial-cards-container'>
                     {testimonials.map(testimonial => {
                         return <TestimonialCard
@@ -39,7 +38,6 @@ function Testimonials() {
                         />
                     })}
                 </Grid>
-            {/* </Grid> */}
             </Container>
         </div>
     )

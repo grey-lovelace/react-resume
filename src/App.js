@@ -1,4 +1,5 @@
 import { Grid, Paper } from '@material-ui/core'
+import Skills from 'components/Skills'
 import Testimonials from 'components/Testimonials'
 import React, { useState } from 'react'
 import './App.css'
@@ -8,7 +9,7 @@ import NavBar from './components/NavBar'
 import TabPanel from './components/TabPanel'
 
 function App() {
-  const [currentTab, setCurrentTab] = useState(0);
+  const [currentTab, setCurrentTab] = useState('Home');
 
   return (
     <div className={"top-banner"}>
@@ -28,7 +29,7 @@ function App() {
           Accomplishments (Coming Soon)
         </TabPanel>
         <TabPanel currentTab={currentTab} tabName={'Skills'}>
-          Skills (Coming Soon)
+          <Skills />
         </TabPanel>    
         <TabPanel currentTab={currentTab} tabName={'Testimonials'}>
           <Testimonials />

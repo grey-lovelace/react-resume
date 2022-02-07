@@ -7,16 +7,16 @@ function Home() {
 
     const classes = useStyles();
 
-    return(
+    return (
         <div>
             <Container maxWidth='md'>
                 <Paper elevation={3} variant="outlined" className={classes.paperRoot}>
                     <Grid container >
                         <Grid item container justify='center' alignItems="center" xs={12} md={6}>
-                            <img className='profile-pic' src={profilePic}  />
+                            <img className='profile-pic' src={profilePic} />
                         </Grid>
                         <Grid item container justify='center' xs={12} md={6}>
-                            <h2>Hello!</h2>
+                            <h1>Hello!</h1>
                             <p>My name is Whitney Lovelace. As a passionate
                                 and results-oriented leader, I strive to show my
                                 concern and compassion for others by helping
@@ -31,10 +31,12 @@ function Home() {
                             </p>
                         </Grid>
                     </Grid>
-            </Paper>
+                </Paper>
             </Container>
             <Container maxWidth='lg'>
-                <h1>My Values</h1>
+                <div className='values-div'>
+                    <h1>My Values</h1>
+                </div>
                 <TableContainer component={Paper}>
                     <Table aria-label="simple table" className='myTable'>
                         <TableHead>

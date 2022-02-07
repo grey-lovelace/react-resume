@@ -19,8 +19,8 @@ function NavBar(props) {
                 
             >
                 <Tab label="Home" value='Home' />
-                {/* <Tab label="Accomplishments" value='Accomplishments' />
-                <Tab label="Skills" value='Skills' /> */}
+                {/* <Tab label="Accomplishments" value='Accomplishments' />*/
+                <Tab label="Skills" value='Skills' /> }
                 <Tab label="Testimonials" value='Testimonials' />
             </Tabs>
         </div>
