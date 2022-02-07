@@ -1,7 +1,8 @@
 import { Grid, Paper } from '@material-ui/core'
-import Home from './components/Home'
-import React, { Component, useState } from 'react'
+import Testimonials from 'components/Testimonials'
+import React, { useState } from 'react'
 import './App.css'
+import Home from './components/Home'
 import NamePlate from './components/NamePlate'
 import NavBar from './components/NavBar'
 import TabPanel from './components/TabPanel'
@@ -12,25 +13,25 @@ function App() {
   return (
     <div className={"top-banner"}>
       <Grid container spacing={3}>  
-        <Grid item xs={6}>
+        <Grid item xs={12} md={4}>
           <NamePlate />
         </Grid>
-        <Grid item xs={6}>
+        <Grid item container xs={12} md={8} justify='flex-end'>
           <NavBar currentValue={currentTab} handleChange={setCurrentTab}/>
         </Grid>
       </Grid>
-      <Paper square>
-        <TabPanel value={currentTab} index={0}>
+      <Paper>
+        <TabPanel currentTab={currentTab} tabName={'Home'}>
           <Home />
         </TabPanel>
-        <TabPanel value={currentTab} index={1}>
-          Accomplishments
+        <TabPanel currentTab={currentTab} tabName={'Accomplishments'}>
+          Accomplishments (Coming Soon)
         </TabPanel>
-        <TabPanel value={currentTab} index={2}>
-          Skills
+        <TabPanel currentTab={currentTab} tabName={'Skills'}>
+          Skills (Coming Soon)
         </TabPanel>    
-        <TabPanel value={currentTab} index={3}>
-          Testimonials
+        <TabPanel currentTab={currentTab} tabName={'Testimonials'}>
+          <Testimonials />
         </TabPanel>  
       </Paper>
       

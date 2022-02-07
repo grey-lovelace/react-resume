@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import Paper from '@material-ui/core/Paper';
-import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Tabs from '@material-ui/core/Tabs';
+import React from 'react';
 
 function NavBar(props) {
     const handleChange = (event, newValue) => {
@@ -9,7 +8,7 @@ function NavBar(props) {
     };
 
     return (
-        // <Paper className={'navbar'} square>
+        <div className={'navbar'}>
             <Tabs
                 value={props.currentValue}
                 indicatorColor="primary"
@@ -19,12 +18,12 @@ function NavBar(props) {
                 centered
                 
             >
-                <Tab label="Home" />
-                <Tab label="Accomplishments" />
-                <Tab label="Skills" />
-                <Tab label="Testimonials" />
+                <Tab label="Home" value='Home' />
+                {/* <Tab label="Accomplishments" value='Accomplishments' />
+                <Tab label="Skills" value='Skills' /> */}
+                <Tab label="Testimonials" value='Testimonials' />
             </Tabs>
-        // </Paper>
+        </div>
     );
 }
 

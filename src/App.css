@@ -4,9 +4,22 @@
   --tertiary-color: #a5a5a5;
 }
 
+* {
+  color: var(--secondary-color)
+}
+
 .top-banner {
   background-color: var(--primary-color);
   color: var(--secondary-color)
+}
+
+.navbar {
+  align-self: end;
+}
+
+.name-plate {
+  padding: 5px;
+  padding-left: 25px
 }
 
 .MuiPaper-root {
@@ -24,3 +37,31 @@
 /* .name-sub {
   color: var(--tertiary-color);
 } */
+/* 
+.MuiTableCell-root{
+  border-bottom: none;
+  border-width: "2";
+  border-right: black;
+} */
+.testimonials-header {
+  text-align: center;
+}
+
+.testimonial-author {
+  font-weight: bold;
+  text-align: right;
+}
+
+.testimonial-cards {
+  padding-bottom: 15px
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.profile-pic {
+  padding: 15px;
+  height: 275px;
+
+}

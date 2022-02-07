@@ -2,17 +2,17 @@ import React from 'react';
 import { Box, Typography } from "@material-ui/core";
 
 function TabPanel(props) {    
-    const { children, value, index, ...other } = props;
+    const { children, currentTab, tabName, ...other } = props;
 
     return (
         <div
             role="tabpanel"
-            hidden={value !== index}
-            id={`full-width-tabpanel-${index}`}
-            aria-labelledby={`full-width-tab-${index}`}
+            hidden={currentTab !== tabName}
+            id={`full-width-tabpanel-${tabName}`}
+            aria-labelledby={`full-width-tab-${tabName}`}
             {...other}
         >
-        {value === index && (
+        {currentTab === tabName && (
             <Box p={3}>
             <Typography>{children}</Typography>
             </Box>
@@ -23,8 +23,8 @@ function TabPanel(props) {
 
 // TabPanel.propTypes = {
 //   children: PropTypes.node,
-//   index: PropTypes.any.isRequired,
-//   value: PropTypes.any.isRequired,
+//   tabName: PropTypes.any.isRequired,
+//   currentTab: PropTypes.any.isRequired,
 // };
 
 export default TabPanel;
