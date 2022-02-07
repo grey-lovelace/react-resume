@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className={"top-banner"}>
-      <Grid container spacing={3}>  
+      <Grid container>  
         <Grid item xs={12} md={4}>
           <NamePlate />
         </Grid>

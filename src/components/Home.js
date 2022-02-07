@@ -17,18 +17,20 @@ function Home() {
                         </Grid>
                         <Grid item container justify='center' xs={12} md={6}>
                             <h1>Hello!</h1>
-                            <p>My name is Whitney Lovelace. As a passionate
-                                and results-oriented leader, I strive to show my
-                                concern and compassion for others by helping
-                                them clarify their purpose and maximize their
-                                full potential. I have a proven track record of
-                                increasing accountability and delivering results.
-                                I pride myself on my ability to simplify
-                                ambiguous and complex problems into
-                                actionable solutions. I look forward to helping
+                            <Container>
+                                <p>My name is Whitney Lovelace. As a passionate
+                                    and results-oriented leader, I strive to show my
+                                    concern and compassion for others by helping
+                                    them clarify their purpose and maximize their
+                                    full potential. I have a proven track record of
+                                    increasing accountability and delivering results.
+                                    I pride myself on my ability to simplify
+                                    ambiguous and complex problems into
+                                    actionable solutions. I look forward to helping
 
-                                you achieve your goals.
-                            </p>
+                                    you achieve your goals.
+                                </p>
+                            </Container>
                         </Grid>
                     </Grid>
                 </Paper>
