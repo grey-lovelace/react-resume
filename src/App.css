@@ -5,33 +5,38 @@
 }
 
 * {
-  color: var(--secondary-color);
+  /* color: var(--secondary-color); */
   /* font-family: Verdana */
 }
 
 .top-banner {
-  background-color: var(--primary-color);
-  color: var(--secondary-color)
+  background-color: var(--secondary-color);
+  color: var(--primary-color)
 }
 
 .navbar {
   align-self: end;
+  /* background-color: var(--primary-color); */
 }
 
 .name-plate {
   padding: 5px;
   padding-left: 20px;
-  min-width: 380px;
-  text-align: left;
+  min-width: 360px;
+  text-align: left !important;
+}
+
+.avatar {
+  margin-right: 10px;
 }
 
 .MuiPaper-root {
   background-color: var(--primary-color);
 }
 
-/* .first-name {
-  color: var(--secondary-color);
-} */
+.first-name {
+  color: var(--primary-color);
+}
 
 .last-name {
   color: var(--tertiary-color);
@@ -56,21 +61,23 @@
 }
 
 .testimonial-card {
-  padding-bottom: 15px
+  padding-bottom: 20px;
+  margin: 10px
+}
+
+.testimonial-quote {
+  padding: 15px;
 }
 
 .bold {
   font-weight: bold;
+  word-wrap: normal;
 }
 
 .profile-pic {
   padding: 15px;
-  height: 275px;
-
-}
-
-.values-div {
-  text-align: center;
+  border-radius: 200px;
+  margin-right: 130px;
 }
 
 .skill-type {
@@ -80,8 +87,21 @@
 
 .skill-details {
   text-align: center;
+  padding: 10px
 }
 
 .thick-divider {
   border-width: 15px;
+}
+
+.value-card{
+  width: 150px;
+  text-align: center;
+  background-color: var(--secondary-color);
+}
+
+@media screen and (max-width: 959px) {
+  .profile-pic {
+    margin-right: 0px
+  }
 }

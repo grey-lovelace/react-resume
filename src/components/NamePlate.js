@@ -4,9 +4,9 @@ import profilePic from '../images/profile.jpeg';
 
 const NamePlate = () => {
     return (
-            <Grid container alignItems='center' spacing={3} className='name-plate'>
+            <Grid container alignItems='center' className='name-plate'>
                 <Grid item >
-                    <Avatar src={profilePic} />
+                    <Avatar src={profilePic} className='avatar'/>
                 </Grid>
                 <Grid item >
                     <h1>
@@ -19,4 +19,4 @@ const NamePlate = () => {
     );
 }
 
-export default NamePlate;
+export default NamePlate; 

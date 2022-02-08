@@ -7,13 +7,18 @@ import Home from './components/Home'
 import NamePlate from './components/NamePlate'
 import NavBar from './components/NavBar'
 import TabPanel from './components/TabPanel'
+import { withStyles } from "@material-ui/core/styles";
+import useStyles from 'useStyles'
+import '@fontsource/roboto';
 
 function App() {
   const [currentTab, setCurrentTab] = useState('Home');
 
+  const classes = useStyles();
+
   return (
-    <div className={"top-banner"}>
-      <Grid container>  
+    <div >
+      <Grid container className={"top-banner"}>  
         <Grid item xs={12} md={4}>
           <NamePlate />
         </Grid>
@@ -21,7 +26,7 @@ function App() {
           <NavBar currentValue={currentTab} handleChange={setCurrentTab}/>
         </Grid>
       </Grid>
-      <Paper>
+      <Paper className={classes.root}>
         <TabPanel currentTab={currentTab} tabName={'Home'}>
           <Home />
         </TabPanel>

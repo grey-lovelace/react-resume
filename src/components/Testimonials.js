@@ -1,4 +1,4 @@
-import { Container, Grid } from "@material-ui/core";
+import { Container, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import TestimonialCard from "./TestimonialCard";
 
@@ -29,7 +29,7 @@ function Testimonials() {
     return(
         <div>
             <Container maxWidth='lg'>
-            <h1 >Testimonials</h1>
+            <Typography variant="h4" gutterBottom>Testimonials</Typography>
                 <Grid container className='testimonial-cards-container'>
                     {testimonials.map(testimonial => {
                         return <TestimonialCard

@@ -1,4 +1,4 @@
-import { Container, Grid } from "@material-ui/core";
+import { Container, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import Skill from "./Skill";
 
@@ -66,7 +66,7 @@ function Skills() {
     return (
         <div>
             <Container maxWidth='lg'>
-                <h1>Skills</h1>
+                <Typography variant={"h4"} gutterBottom>Skills</Typography>
                 <Grid container >
                     {skills.map(skill => {
                         return <Skill

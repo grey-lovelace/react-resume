@@ -1,4 +1,4 @@
-import { Divider, Grid } from "@material-ui/core";
+import { Divider, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "useStyles";
 
@@ -8,14 +8,19 @@ function Skill(props) {
 
     return (
         <Grid item xs={12}>
-            <Grid container spacing={3} justify='center' alignItems="center">
-                <Grid item xs={3} className="skill-type">
-                    <p>{props.type}</p>
+            <Grid container justify='center' alignItems="center">
+                <Grid item sm={3} xs={12} className="skill-type">
+                    <Typography variant={"h6"}>{props.type}</Typography>
                 </Grid>
-                <Grid item xs={9} className="skill-details">
-                    {props.details.map(detail => {
-                        return <p>• {detail}</p>
-                    })}
+                <Grid item sm={9} xs={12} >
+                    {props.details.map(detail => (
+                        <Typography
+                            className="skill-details"
+                            variant={"body1"}
+                        >
+                            • {detail}
+                        </Typography>
+                    ))}
                 </Grid>
             </Grid>
             <Divider className={classes.thickDivider} />
