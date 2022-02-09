@@ -1,4 +1,3 @@
-import { AppBar, Grid, Paper } from '@material-ui/core'
 import Skills from 'components/Skills'
 import Testimonials from 'components/Testimonials'
 import React, { useState } from 'react'
@@ -7,9 +6,10 @@ import Home from './components/Home'
 import NamePlate from './components/NamePlate'
 import NavBar from './components/NavBar'
 import TabPanel from './components/TabPanel'
-import { withStyles } from "@material-ui/core/styles";
+// import { withStyles } from "@material-ui/core/styles";
 import useStyles from 'useStyles'
 import '@fontsource/roboto';
+import { AppBar, Grid } from '@mui/material'
 
 const App = () => {
   const [currentTab, setCurrentTab] = useState('Home');

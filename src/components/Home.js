@@ -1,4 +1,4 @@
-import { Box, Container, Divider, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@material-ui/core";
+import { Box, Container, Divider, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 import React from "react";
 import useStyles from "useStyles";
 import profilePic from '../images/profile.jpeg';

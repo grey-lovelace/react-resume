@@ -1,4 +1,4 @@
-import { Avatar, Grid, Typography } from '@material-ui/core';
+import { Avatar, Grid, Typography } from '@mui/material';
 import React from 'react';
 import profilePic from '../images/profile.jpeg';
 

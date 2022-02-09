@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, CardHeader, Chip, Container, Divider, Grid, GridList, GridListTile, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@material-ui/core";
+import { Box, Card, CardContent, CardHeader, Chip, Collapse, Container, Divider, Grid, GridList, GridListTile, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 import React from "react";
 import useStyles from "useStyles";
 
@@ -46,6 +46,7 @@ function Values() {
             <Grid container justify='space-around' alignItems="center" spacing={1}>
                 {values.map(value => {
                     return <Grid item>
+                        <Collapse in={true} appear={true} orientation="horizontal">
                         <Card className={classes.card}>
                             <CardHeader className={classes.content}>
                                 <Typography
@@ -70,6 +71,7 @@ function Values() {
                                 </Typography>
                             </CardContent>
                         </Card>
+                        </Collapse>
                     </Grid>
                 })}
             </Grid>
