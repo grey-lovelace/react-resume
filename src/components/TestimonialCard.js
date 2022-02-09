@@ -8,7 +8,7 @@ function TestimonialCard(props) {
 
     return(
         <Grid item xs={12} className='testimonial-card' >
-            <Paper className={classes.paperRoot}>
+            <Paper elevation={3} variant="outlined" className={classes.paperRoot}>
                 <Container>
                     <Typography className="testimonial-quote">{props.quote}</Typography>
                     <Typography style={{ fontWeight: 600, textAlign: 'right', padding: '15px' }}>- {props.author}</Typography>

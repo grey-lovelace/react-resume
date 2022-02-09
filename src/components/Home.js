@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@material-ui/core";
+import { Box, Container, Divider, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "useStyles";
 import profilePic from '../images/profile.jpeg';
@@ -9,17 +9,18 @@ function Home() {
     const classes = useStyles();
 
     return (
-        <div>
+        <Box>
             <Container maxWidth='sm'>
                 <Paper elevation={3} variant="outlined" className={classes.paperRoot}>
-                    <Grid container >
-                        <Grid container item justify='center' alignItems="center" xs={12} md={2}>
+                    <Grid container justify='space-around' align ="center">
+                        <Grid item xs={12} md={2}>
                             <img className='profile-pic' src={profilePic} />
                         </Grid>
-                        <Grid container item xs={12} md={10}>
+                        <Grid item xs={12} md={10}>
                             <Container>
                                 <Typography
                                     variant={"h4"}
+                                    gutterBottom
                                 >
                                     Hello,
                                 </Typography>
@@ -43,9 +44,9 @@ function Home() {
                     </Grid>
                 </Paper>
             </Container>
-            <br></br>
+            <Divider></Divider>
             <Values />
-        </div>
+        </Box>
     )
 }
 

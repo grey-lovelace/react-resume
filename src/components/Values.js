@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Chip, Container, Divider, Grid, GridList, GridListTile, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@material-ui/core";
+import { Box, Card, CardContent, CardHeader, Chip, Container, Divider, Grid, GridList, GridListTile, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "useStyles";
 
@@ -47,14 +47,16 @@ function Values() {
                 {values.map(value => {
                     return <Grid item>
                         <Card className={classes.card}>
-                            <CardContent className={classes.content}>
+                            <CardHeader className={classes.content}>
                                 <Typography
                                     variant={"h6"}
-                                    gutterBottom
+                                    // gutterBottom
                                 >
                                     {value.title}
                                 </Typography>
-                                <Divider className={classes.divider} light />
+                            </CardHeader>
+                            <CardContent className={classes.content}>
+                                {/* <Divider className={classes.divider} light /> */}
                                 <Typography
                                     variant={"caption"}
                                 >
