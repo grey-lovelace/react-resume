@@ -44,10 +44,10 @@ function Values() {
                 </Typography>
             </Box>
             <Grid container justify='space-around' alignItems="center" spacing={1}>
-                {values.map(value => {
+                {values.map((value,index) => {
                     return (
                         <Grid item>
-                            <Grow in={true} appear={true}>
+                            <Grow in={true} appear={true} style={{ transitionDelay: `${index * 100}ms` }} timeout={1000}>
                                 <Card className={classes.card}>
                                     <CardContent className={classes.content}>
                                         <Typography

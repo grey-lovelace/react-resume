@@ -1,4 +1,4 @@
-import { Container, Grid, Paper, Typography } from "@material-ui/core";
+import { Container, Grid, Paper, Typography, Grow } from "@material-ui/core";
 import React from "react";
 import useStyles from "useStyles";
 
@@ -48,104 +48,114 @@ function Accomplishments() {
                 <Grid container spacing={2} justify='space-between'>
                     <Grid item container direction="column" xs={7} spacing={2} justify='space-between'>
                         <Grid item>
-                            <Paper className={classes.paperRoot}>
-                                <Container>
-                                    <Typography variant={"h6"} style={{fontWeight:'bold'}}>{strategicPlanning.type}</Typography>
-                                    <ul>
-                                        {strategicPlanning.details.map(detail => {
-                                            return <li>
-                                                <Typography>{detail}</Typography>
-                                            </li>
-                                        })}
-                                    </ul>
-                                </Container>
-                            </Paper>
+                            <Grow in={true} appear={true} style={{ transitionDelay: `${0 * 100}ms` }} timeout={1000}>
+                                <Paper className={classes.paperRoot}>
+                                    <Container>
+                                        <Typography variant={"h6"} style={{fontWeight:'bold'}}>{strategicPlanning.type}</Typography>
+                                        <ul>
+                                            {strategicPlanning.details.map(detail => {
+                                                return <li>
+                                                    <Typography>{detail}</Typography>
+                                                </li>
+                                            })}
+                                        </ul>
+                                    </Container>
+                                </Paper>
+                            </Grow>
                         </Grid>
                         <Grid item>
-                            <Paper className={classes.paperRootGray}>
-                                <Container>
-                                    <Typography variant={"h6"} style={{fontWeight:'bold'}}>{dataAnalysis.type}</Typography>
-                                    <ul>
-                                        {dataAnalysis.details.map(detail => {
-                                            return <li>
-                                                <Typography>{detail}</Typography>
-                                            </li>
-                                        })}
-                                    </ul>
-                                </Container>
-                            </Paper>
+                            <Grow in={true} appear={true} style={{ transitionDelay: `${2 * 100}ms` }} timeout={1000}>
+                                <Paper className={classes.paperRootGray}>
+                                    <Container>
+                                        <Typography variant={"h6"} style={{fontWeight:'bold'}}>{dataAnalysis.type}</Typography>
+                                        <ul>
+                                            {dataAnalysis.details.map(detail => {
+                                                return <li>
+                                                    <Typography>{detail}</Typography>
+                                                </li>
+                                            })}
+                                        </ul>
+                                    </Container>
+                                </Paper>
+                            </Grow>
                         </Grid>
                     </Grid>
                     <Grid item container direction="column" xs={5}  spacing={2} >
                         <Grid item>
-                            <Paper className={classes.paperRootGray}>
-                                <Container>
-                                    <Typography variant={"h6"} style={{fontWeight:'bold'}}>{projectManagement.type}</Typography>
-                                    <ul>
-                                        {projectManagement.details.map(detail => {
-                                            return <li>
-                                                <Typography>{detail}</Typography>
-                                            </li>
-                                        })}
-                                    </ul>
-                                </Container>
-                            </Paper>
+                            <Grow in={true} appear={true} style={{ transitionDelay: `${1 * 100}ms` }} timeout={1000}>
+                                <Paper className={classes.paperRootGray}>
+                                    <Container>
+                                        <Typography variant={"h6"} style={{fontWeight:'bold'}}>{projectManagement.type}</Typography>
+                                        <ul>
+                                            {projectManagement.details.map(detail => {
+                                                return <li>
+                                                    <Typography>{detail}</Typography>
+                                                </li>
+                                            })}
+                                        </ul>
+                                    </Container>
+                                </Paper>
+                            </Grow>
                         </Grid>
                         <Grid item>
-                            <Paper className={classes.paperRoot}>
-                                <Container>
-                                    <Typography variant={"h6"} style={{fontWeight:'bold'}} gutterBottom>{'Education'}</Typography>
+                            <Grow in={true} appear={true} style={{ transitionDelay: `${3 * 100}ms` }} timeout={1000}>
+                                <Paper className={classes.paperRoot}>
                                     <Container>
-                                        <Typography style={{fontWeight:'bold'}}>{'Master of Business Administration with a specialization in Business Analytics'}</Typography>
-                                        <Typography style={{fontStyle:'italic'}}>{'Iowa State University, Ames, IA'}</Typography>
-                                        <Typography>{'Graduation: Spring 2022'}</Typography>
-                                        <Typography>{'Current GPA: 3.98'}</Typography>
-                                        <br/>
-                                        <Typography style={{fontWeight:'bold'}}>{'Bachelor of Arts Economics, Honors Mathematics'}</Typography>
-                                        <Typography style={{fontStyle:'italic'}}>{'Simpson College, Indianola, IA'}</Typography>
-                                        <Typography>{'Minor: Computer Science'}</Typography>
-                                        <Typography>{'GPA: 3.93'}</Typography>
+                                        <Typography variant={"h6"} style={{fontWeight:'bold'}} gutterBottom>{'Education'}</Typography>
+                                        <Container>
+                                            <Typography style={{fontWeight:'bold'}}>{'Master of Business Administration with a specialization in Business Analytics'}</Typography>
+                                            <Typography style={{fontStyle:'italic'}}>{'Iowa State University, Ames, IA'}</Typography>
+                                            <Typography>{'Graduation: Spring 2022'}</Typography>
+                                            <Typography>{'Current GPA: 3.98'}</Typography>
+                                            <br/>
+                                            <Typography style={{fontWeight:'bold'}}>{'Bachelor of Arts Economics, Honors Mathematics'}</Typography>
+                                            <Typography style={{fontStyle:'italic'}}>{'Simpson College, Indianola, IA'}</Typography>
+                                            <Typography>{'Minor: Computer Science'}</Typography>
+                                            <Typography>{'GPA: 3.93'}</Typography>
+                                        </Container>
                                     </Container>
-                                </Container>
-                            </Paper>
+                                </Paper>
+                            </Grow>
                         </Grid>
                     </Grid>
                     <Grid item xs={12}>
-                        <Paper className={classes.paperRoot}>
-                            <Container>
-                                <Typography variant={"h6"} style={{fontWeight:'bold'}}>{'Awards'}</Typography>
-                                <ul>
-                                    <li>
-                                        <Typography>{'COMAP Mathematical Contest in Modeling/Interdisciplinary Contest in Modeling'}</Typography>
-                                        <ul>
-                                            <li>
-                                                <Typography>{'4-time participant, receiving the following ratings:'}</Typography>
-                                            </li>
+                        <Grow in={true} appear={true} style={{ transitionDelay: `${4 * 100}ms` }} timeout={1000}>
+                            <Paper className={classes.paperRoot}>
+                                <Container>
+                                    <Typography variant={"h6"} style={{fontWeight:'bold'}}>{'Awards'}</Typography>
+                                    <ul>
+                                        <li>
+                                            <Typography>{'COMAP Mathematical Contest in Modeling/Interdisciplinary Contest in Modeling'}</Typography>
                                             <ul>
                                                 <li>
-                                                    <Typography>{'Finalist (1) – solution ranked in the top 2% of all solutions submitted internationally'}</Typography>
+                                                    <Typography>{'4-time participant, receiving the following ratings:'}</Typography>
                                                 </li>
+                                                <ul>
+                                                    <li>
+                                                        <Typography>{'Finalist (1) – solution ranked in the top 2% of all solutions submitted internationally'}</Typography>
+                                                    </li>
+                                                    <li>
+                                                        <Typography>{'Meritorious (2) – solution ranked in the top 9% (2012) and top 20% (2011) of all solutions submitted internationally'}</Typography>
+                                                    </li>
+                                                    <li>
+                                                        <Typography>{'Honorable Mention (1) – solution ranked in the top 40% of all solutions submitted internationally'}</Typography>
+                                                    </li>
+                                                </ul>
                                                 <li>
-                                                    <Typography>{'Meritorious (2) – solution ranked in the top 9% (2012) and top 20% (2011) of all solutions submitted internationally'}</Typography>
-                                                </li>
-                                                <li>
-                                                    <Typography>{'Honorable Mention (1) – solution ranked in the top 40% of all solutions submitted internationally'}</Typography>
+                                                    <Typography>{'Iowa Mathematical Modeling Contest: Finalist and award for Best Presentation'}</Typography>
                                                 </li>
                                             </ul>
-                                            <li>
-                                                <Typography>{'Iowa Mathematical Modeling Contest: Finalist and award for Best Presentation'}</Typography>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <Typography>{'Midwest Instruction and Computing Symposium Programming Contest: Placed in the top 25% of teams'}</Typography>
-                                    </li>
-                                    <li>
-                                        <Typography>{'Outstanding Senior in Mathematics and Economics at Simpson College'}</Typography>
-                                    </li>
-                                </ul>
-                            </Container>
-                        </Paper>
+                                        </li>
+                                        <li>
+                                            <Typography>{'Midwest Instruction and Computing Symposium Programming Contest: Placed in the top 25% of teams'}</Typography>
+                                        </li>
+                                        <li>
+                                            <Typography>{'Outstanding Senior in Mathematics and Economics at Simpson College'}</Typography>
+                                        </li>
+                                    </ul>
+                                </Container>
+                            </Paper>
+                        </Grow>
                     </Grid>
                 </Grid>
             </Container>

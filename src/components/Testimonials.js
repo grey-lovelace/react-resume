@@ -31,10 +31,11 @@ function Testimonials() {
             <Container maxWidth='lg'>
             <Typography variant="h4" gutterBottom>Testimonials</Typography>
                 <Grid container className='testimonial-cards-container'>
-                    {testimonials.map(testimonial => {
+                    {testimonials.map((testimonial, index) => {
                         return <TestimonialCard
                             author={testimonial.author}
                             quote={testimonial.quote}
+                            index={index}
                         />
                     })}
                 </Grid>

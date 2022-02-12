@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from "@material-ui/core";
+import { Container, Grid, Typography, Grow } from "@material-ui/core";
 import React from "react";
 import Skill from "./Skill";
 
@@ -67,14 +67,16 @@ function Skills() {
         <div>
             <Container maxWidth='lg'>
                 <Typography variant={"h4"} gutterBottom>Skills</Typography>
-                <Grid container >
-                    {skills.map(skill => {
-                        return <Skill
-                            type={skill.type}
-                            details={skill.details}
-                        />
-                    })}
-                </Grid>
+                <Grow in={true} appear={true} timeout={1000}>
+                    <Grid container >
+                        {skills.map(skill => {
+                            return <Skill
+                                type={skill.type}
+                                details={skill.details}
+                            />
+                        })}
+                    </Grid>
+                </Grow>
             </Container>
         </div>
     )
