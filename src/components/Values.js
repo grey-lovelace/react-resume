@@ -49,6 +49,7 @@ function Values() {
                         <Grid item>
                             <Grow in={true} appear={true} style={{ transitionDelay: `${index * 100}ms` }} timeout={1000}>
                                 <Card className={classes.card}>
+                                    <Grid contianer align="center">
                                     <CardContent className={classes.content}>
                                         <Typography
                                             variant={"h6"}
@@ -56,6 +57,7 @@ function Values() {
                                         >
                                             {value.title}
                                         </Typography>
+                                        
                                         <Divider className={classes.divider} light />
                                         <Typography
                                             variant={"caption"}
@@ -69,6 +71,7 @@ function Values() {
                                             {value.item2}
                                         </Typography>
                                     </CardContent>
+                                    </Grid>
                                 </Card>
                             </Grow>
                         </Grid>

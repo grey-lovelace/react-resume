@@ -80,7 +80,7 @@ function Accomplishments() {
                             </Grow>
                         </Grid>
                     </Grid>
-                    <Grid item container direction="column" xs={5}  spacing={2} >
+                    <Grid item container direction="column" xs={5}  spacing={2}  justify='space-between'>
                         <Grid item>
                             <Grow in={true} appear={true} style={{ transitionDelay: `${1 * 100}ms` }} timeout={1000}>
                                 <Paper className={classes.paperRootGray}>

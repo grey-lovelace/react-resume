@@ -11,7 +11,7 @@ function Home() {
     return (
         <div>
             <Container maxWidth='sm'>
-                <Paper elevation={3} variant="outlined" className={classes.paperRoot}>
+                <Paper elevation={3} variant="outlined" className={classes.paperRootWithPadding}>
                     <Grid container >
                         <Grid container item justify='center' alignItems="center" xs={12} md={2}>
                             <img className='profile-pic' src={profilePic} />
@@ -35,7 +35,6 @@ function Home() {
                                     I pride myself on my ability to simplify
                                     ambiguous and complex problems into
                                     actionable solutions. I look forward to helping
-
                                     you achieve your goals.
                                 </Typography>
                             </Container>

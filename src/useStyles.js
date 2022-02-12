@@ -17,6 +17,10 @@ const useStyles = makeStyles(theme => ({
       backgroundColor: '#F3F3F3'
     },
     paperRoot: paperBase,
+    paperRootWithPadding: {
+      ...paperBase,
+      padding: '35px',
+    },
     paperRootGray: {
       ...paperBase,
       backgroundColor: '#a5a5a5',
@@ -27,6 +31,7 @@ const useStyles = makeStyles(theme => ({
     },
     card: {
       maxWidth: 200,
+      height: 300,
       margin: "auto",
       transition: "0.3s",
       borderRadius: '15px',
