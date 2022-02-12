@@ -1,4 +1,5 @@
 import { Grid, Paper } from '@material-ui/core'
+import Accomplishments from 'components/Accomplishments'
 import Skills from 'components/Skills'
 import Testimonials from 'components/Testimonials'
 import React, { useState } from 'react'
@@ -31,7 +32,7 @@ function App() {
           <Home />
         </TabPanel>
         <TabPanel currentTab={currentTab} tabName={'Accomplishments'}>
-          Accomplishments (Coming Soon)
+          <Accomplishments/>
         </TabPanel>
         <TabPanel currentTab={currentTab} tabName={'Skills'}>
           <Skills />

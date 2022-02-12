@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Chip, Container, Divider, Grid, GridList, GridListTile, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@material-ui/core";
+import { Box, Card, CardContent, Grow, Container, Divider, Grid, GridList, GridListTile, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from "@material-ui/core";
 import React from "react";
 import useStyles from "useStyles";
 
@@ -45,31 +45,34 @@ function Values() {
             </Box>
             <Grid container justify='space-around' alignItems="center" spacing={1}>
                 {values.map(value => {
-                    return <Grid item>
-                        <Card className={classes.card}>
-                            <CardContent className={classes.content}>
-                                <Typography
-                                    variant={"h6"}
-                                    gutterBottom
-                                >
-                                    {value.title}
-                                </Typography>
-                                <Divider className={classes.divider} light />
-                                <Typography
-                                    variant={"caption"}
-                                >
-                                    {value.item1}
-                                </Typography>
-                                <Divider className={classes.divider} light />
-                                <Typography
-                                    variant={"caption"}
-                                >
-                                    {value.item2}
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                    </Grid>
-                })}
+                    return (
+                        <Grid item>
+                            <Grow in={true} appear={true}>
+                                <Card className={classes.card}>
+                                    <CardContent className={classes.content}>
+                                        <Typography
+                                            variant={"h6"}
+                                            gutterBottom
+                                        >
+                                            {value.title}
+                                        </Typography>
+                                        <Divider className={classes.divider} light />
+                                        <Typography
+                                            variant={"caption"}
+                                        >
+                                            {value.item1}
+                                        </Typography>
+                                        <Divider className={classes.divider} light />
+                                        <Typography
+                                            variant={"caption"}
+                                        >
+                                            {value.item2}
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                            </Grow>
+                        </Grid>
+                )})}
             </Grid>
         </Container>
     )

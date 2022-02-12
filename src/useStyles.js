@@ -1,19 +1,25 @@
 const { makeStyles } = require("@material-ui/core");
 
+const paperBase = {
+  backgroundColor: '#cadee5',
+  padding: '2px',
+  margin: "auto",
+  transition: "0.3s",
+  borderRadius: '15px',
+  boxShadow: "0 2px 40px -12px rgba(0,0,0,0.3)",
+  "&:hover": {
+    boxShadow: "0 4px 70px -12.125px rgba(0,0,0,0.3)"
+  }
+}
+
 const useStyles = makeStyles(theme => ({
     root: {
       backgroundColor: '#F3F3F3'
     },
-    paperRoot: {
-      backgroundColor: '#cadee5',
-      padding: '2px',
-      margin: "auto",
-      transition: "0.3s",
-      borderRadius: '15px',
-      boxShadow: "0 2px 40px -12px rgba(0,0,0,0.3)",
-      "&:hover": {
-        boxShadow: "0 4px 70px -12.125px rgba(0,0,0,0.3)"
-      }
+    paperRoot: paperBase,
+    paperRootGray: {
+      ...paperBase,
+      backgroundColor: '#a5a5a5',
     },
     thickDivider: {
       height: 4,
