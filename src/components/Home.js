@@ -1,4 +1,4 @@
-import { Box, Container, Divider, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import { Stack, Container, Divider, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
 import React from "react";
 import useStyles from "useStyles";
 import profilePic from '../images/profile.jpeg';
@@ -9,10 +9,10 @@ function Home() {
     const classes = useStyles();
 
     return (
-        <Box>
+        <Stack spacing={5}>
             <Container maxWidth='sm'>
-                <Paper elevation={3} variant="outlined" className={classes.paperRoot}>
-                    <Grid container justify='space-around' align ="center">
+                <Paper elevation={3} variant="outlined" sx={{backgroundColor: 'white'}}>
+                    <Grid container justifyContent='space-around' alignItems ="center">
                         <Grid item xs={12} md={2}>
                             <img className='profile-pic' src={profilePic} />
                         </Grid>
@@ -46,7 +46,7 @@ function Home() {
             </Container>
             <Divider></Divider>
             <Values />
-        </Box>
+        </Stack>
     )
 }
 

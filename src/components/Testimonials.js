@@ -1,6 +1,7 @@
-import { Container, Grid, Typography } from '@mui/material';
-import React from "react";
+import { Box, Container, Grid, Stack, Typography } from '@mui/material';
+import React, { useRef } from "react";
 import TestimonialCard from "./TestimonialCard";
+import { TransitionGroup } from 'react-transition-group';
 
 function Testimonials() {
     const testimonials = [
@@ -29,15 +30,16 @@ function Testimonials() {
     return(
         <div>
             <Container maxWidth='lg'>
-            <Typography variant="h4" gutterBottom>Testimonials</Typography>
-                <Grid container className='testimonial-cards-container'>
-                    {testimonials.map(testimonial => {
+                <Typography variant="h4" gutterBottom>Testimonials</Typography>
+                    <Stack spacing={(4)} >
+                    {testimonials.map((testimonial,index) => {
                         return <TestimonialCard
                             author={testimonial.author}
                             quote={testimonial.quote}
+                            index={index}
                         />
                     })}
-                </Grid>
+                    </Stack>
             </Container>
         </div>
     )

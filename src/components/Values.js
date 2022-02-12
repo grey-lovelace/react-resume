@@ -1,4 +1,5 @@
-import { Box, Card, CardContent, CardHeader, Chip, Collapse, Container, Divider, Grid, GridList, GridListTile, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import { Box, Card, CardContent, CardHeader, Chip, Grow, Container, Divider, Grid, GridList, GridListTile, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import { height } from '@mui/system';
 import React from "react";
 import useStyles from "useStyles";
 
@@ -34,48 +35,44 @@ function Values() {
     const classes = useStyles();
 
     return (
-        <Container maxWidth='lg'>
-            <Box className='values-div'>
+        // <Container maxWidth='lg' >
+        <Grid container  >
+            <Grid item xs={1} />
+            <Grid item xs={10}>
                 <Typography
                     variant={"h4"}
                     gutterBottom
                 >
                     My Values
                 </Typography>
-            </Box>
-            <Grid container justify='space-around' alignItems="center" spacing={1}>
-                {values.map(value => {
-                    return <Grid item>
-                        <Collapse in={true} appear={true} orientation="horizontal">
-                        <Card className={classes.card}>
-                            <CardHeader className={classes.content}>
-                                <Typography
-                                    variant={"h6"}
-                                    // gutterBottom
-                                >
-                                    {value.title}
-                                </Typography>
-                            </CardHeader>
-                            <CardContent className={classes.content}>
-                                {/* <Divider className={classes.divider} light /> */}
-                                <Typography
-                                    variant={"caption"}
-                                >
-                                    {value.item1}
-                                </Typography>
-                                <Divider className={classes.divider} light />
-                                <Typography
-                                    variant={"caption"}
-                                >
-                                    {value.item2}
-                                </Typography>
-                            </CardContent>
-                        </Card>
-                        </Collapse>
-                    </Grid>
-                })}
+                <Grid container justifyContent='space-evenly' alignContent="center" spacing={1}>
+                    {values.map((value,index) => {
+                        return <Grid item>
+                            <Grow in={true} appear={true} style={{ transitionDelay: `${index * 100}ms` }} timeout={1000}>
+                                <Card className={classes.card} sx={{ width: 200, height: 300, backgroundColor:'white'}}>
+                                    <CardHeader title={value.title} className={classes.content} />
+                                    <CardContent className={classes.content}>
+                                        <Typography
+                                            variant={"body2"}
+                                        >
+                                            {value.item1}
+                                        </Typography>
+                                        <Divider className={classes.divider} light />
+                                        <Typography
+                                            variant={"body2"}
+                                        >
+                                            {value.item2}
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                            </Grow>
+                        </Grid>
+                    })}
+                </Grid>
             </Grid>
-        </Container>
+            <Grid item xs={1} />
+        </Grid>
+        // </Container>
     )
 }
 

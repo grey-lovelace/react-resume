@@ -1,4 +1,4 @@
-import { Container, Grid, Typography } from '@mui/material';
+import { Container, Divider, Grid, Stack, Typography } from '@mui/material';
 import React from "react";
 import Skill from "./Skill";
 
@@ -67,14 +67,18 @@ function Skills() {
         <div>
             <Container maxWidth='lg'>
                 <Typography variant={"h4"} gutterBottom>Skills</Typography>
-                <Grid container >
-                    {skills.map(skill => {
+                <Stack 
+                    spacing={3}
+                    // divider={<Divider flexItem />} 
+                >
+                    {skills.map((skill,index) => {
                         return <Skill
                             type={skill.type}
                             details={skill.details}
+                            index={index}
                         />
                     })}
-                </Grid>
+                </Stack>
             </Container>
         </div>
     )

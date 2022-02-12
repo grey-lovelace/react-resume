@@ -1,6 +1,7 @@
 // const { makeStyles } = require("@material-ui/core");
 
-const useStyles = makeStyles(theme => ({
+const useStyles = () => (//makeStyles(theme => (
+  {
     root: {
       // backgroundColor: 'white'
     },
@@ -53,6 +54,8 @@ const useStyles = makeStyles(theme => ({
     //     marginLeft: -theme.spacing.unit
     //   }
     // },
-}));
+  })
+//)
+;
 
 export default useStyles
