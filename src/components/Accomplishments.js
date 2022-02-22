@@ -46,7 +46,7 @@ function Accomplishments() {
             <Container maxWidth='lg'>
                 <h1>Accomplishments</h1>
                 <Grid container spacing={2} justify='space-between'>
-                    <Grid item container direction="column" xs={7} spacing={2} justify='space-between'>
+                    <Grid item container direction="column" md={7} xs={12} spacing={2} justify='space-between'>
                         <Grid item>
                             <Grow in={true} appear={true} style={{ transitionDelay: `${0 * 100}ms` }} timeout={1000}>
                                 <Paper className={classes.paperRoot}>
@@ -80,7 +80,7 @@ function Accomplishments() {
                             </Grow>
                         </Grid>
                     </Grid>
-                    <Grid item container direction="column" xs={5}  spacing={2}  justify='space-between'>
+                    <Grid item container direction="column" md={5}  xs={12}  spacing={2}  justify='space-between'>
                         <Grid item>
                             <Grow in={true} appear={true} style={{ transitionDelay: `${1 * 100}ms` }} timeout={1000}>
                                 <Paper className={classes.paperRootGray}>
